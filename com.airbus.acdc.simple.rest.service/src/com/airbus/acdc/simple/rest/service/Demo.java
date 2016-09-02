@@ -40,19 +40,19 @@ public class Demo {
 //	}
 //
 	// This method is called if HTML is request
-	@GET
-	@Produces(MediaType.TEXT_HTML)
-	public String sayHtmlHello() {
-		
-		List<AirSpace> airSpaces = Storage.getInstance().getAirSpaces();
-		String list = "";
-		for (AirSpace airSpace : airSpaces) {
-			list += "<li>"+ airSpace.getName() +"</li>";
-		}
-		
-		return "<html> " + "<title>" + "All Airspaces" + "</title>" 
-					+ "<body><h1>" + list + "</body></h1>"
-				+ "</html> ";
-	}
+//	@GET
+//	@Produces(MediaType.TEXT_HTML)
+//	public String sayHtmlHello() {
+//		
+//		List<AirSpace> airSpaces = Storage.getInstance().getAirSpaces();
+//		String list = "";
+//		for (AirSpace airSpace : airSpaces) {
+//			list += "<li>"+ airSpace.getName() +"</li>";
+//		}
+//		
+//		return "<html> " + "<title>" + "All Airspaces" + "</title>" 
+//					+ "<body><h1>" + list + "</body></h1>"
+//				+ "</html> ";
+//	}
 
 }

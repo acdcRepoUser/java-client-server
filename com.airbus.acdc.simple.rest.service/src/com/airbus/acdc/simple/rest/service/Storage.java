@@ -19,6 +19,7 @@ public class Storage {
 	
 	private Storage() {
 		airSpaces.add(new AirSpace("Hier nix rein"));
+		airSpaces.add(new AirSpace("No. 2"));
 	}
 	
 	public List<AirSpace> getAirSpaces() {
