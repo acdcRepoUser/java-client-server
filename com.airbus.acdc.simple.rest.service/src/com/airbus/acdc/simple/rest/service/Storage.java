@@ -1,10 +1,12 @@
 /**
  * 
  */
-package com.airbus.acdc.simple.model;
+package com.airbus.acdc.simple.rest.service;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import com.airbus.acdc.simple.model.AirSpace;
 
 /**
  *
@@ -21,6 +23,10 @@ public class Storage {
 	
 	public List<AirSpace> getAirSpaces() {
 		return airSpaces;
+	}
+	
+	public void add(AirSpace airSpace) {
+		airSpaces.add(airSpace);
 	}
 	
 	public static Storage getInstance() {

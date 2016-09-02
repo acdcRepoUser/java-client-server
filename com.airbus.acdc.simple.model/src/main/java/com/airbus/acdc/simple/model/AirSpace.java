@@ -13,6 +13,9 @@ public class AirSpace {
 	
 	private String name;
 	
+	public AirSpace() {
+	}
+	
 	public AirSpace(String name) {
 		this.name = name;
 	}
