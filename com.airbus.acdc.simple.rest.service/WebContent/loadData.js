@@ -17,6 +17,7 @@ $(document).ready(function() {
 	})
 })
 
+var viewer = new Cesium.Viewer('cesiumContainer');
 
 
 /*
