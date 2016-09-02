@@ -3,17 +3,21 @@
  * http://api.jquery.com/jquery.getjson/
  */
 
-
-$.getJSON("http://localhost:8080/com.airbus.acdc.simple.rest.service/rest/demo", function(data, textStatus, req) {
-//	var items = [];
-	var ul = document.getElementById("ct");
-	$.each(data, function (key, val) {
-		//console.log(val.name)
-		var li = document.createElement("li");
-	    li.appendChild(document.createTextNode(val.name));
-	    ul.appendChild(li);     
+$(document).ready(function() {
+	
+	$.getJSON("http://localhost:8080/com.airbus.acdc.simple.rest.service/rest/demo", function(data, textStatus, req) {
+//		var items = [];
+		var ul = document.getElementById("ct");
+		$.each(data, function (key, val) {			
+			console.log(val.name)
+			var li = document.createElement("li");
+		    li.appendChild(document.createTextNode(val.name));
+		    ul.appendChild(li);     
+		})
 	})
 })
+
+
 
 /*
 $(document).ready(function() {
