@@ -2,6 +2,7 @@
  * https://spring.io/guides/gs/consuming-rest-jquery/
  * http://api.jquery.com/jquery.getjson/
  */
+'use strict';
 
 $(document).ready(function() {
 	
@@ -9,13 +10,37 @@ $(document).ready(function() {
 //		var items = [];
 		var ul = document.getElementById("ct");
 		$.each(data, function (key, val) {			
-			console.log(val.name)
+			console.log(val)
+			
 			var li = document.createElement("li");
 		    li.appendChild(document.createTextNode(val.name));
 		    ul.appendChild(li);     
 		})
 	})
+	
+	$("#addAS").submit(function() {
+		var nameValue = $("#asname").val;
+		console.log(nameValue);
+		var newAir = {name:nameValue};
+		$.ajax({
+		    type: "PUT",
+		    url: "http://localhost:8080/com.airbus.acdc.simple.rest.service/rest/demo",
+		    // The key needs to match your method's input parameter (case-sensitive).
+		    data: JSON.stringify(newAir),
+		    contentType: "application/json; charset=utf-8",
+		    dataType: "json",
+		    success: function(data){alert(data);},
+		    failure: function(errMsg) {
+		        alert(errMsg);
+		    }
+		});
+		
+	})
+	
+	
 })
+
+
 
 /*
 $(document).ready(function() {

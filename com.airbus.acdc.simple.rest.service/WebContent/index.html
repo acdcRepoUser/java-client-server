@@ -1,12 +1,30 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="ISO-8859-1">
-<title>Storage Overview</title>
+	<meta charset="ISO-8859-1">
+	<title>Storage Overview</title>
+	<head>
+        <title>Hello jQuery</title>        
+       
+        <!--  <script src="http://code.jquery.com/jquery-latest.js"></script> -->
+       <script src="bower_components/jquery/dist/jquery.min.js"></script>
+       	<script src="loadData.js"></script>
+    </head>
 </head>
+ <style>
+      @import url(style.css);
+  </style>
 <body>
 	<b>All Airspace</b>
 	<ul id="ct"></ul>
-	<script type="text/javascript" src="loadData.js"></script>	
+	
+	<form id="addAS" accept-charset="utf-8">
+	
+    <label class="h2" form="newAirSpace">New Air Space</label>
+    <label for="asname">Name</label> 
+    <input type="text" name="asname" id="asname" maxlength="30">
+    
+    <button type="submit">Add</button>
+</form>
 </body>
 </html>
