@@ -10,18 +10,21 @@ $(document).ready(function() {
 //		var items = [];
 		var ul = document.getElementById("ct");
 		$.each(data, function (key, val) {			
-			console.log(val)
+			console.log("add " + val)
 			
-			var li = document.createElement("li");
-		    li.appendChild(document.createTextNode(val.name));
-		    ul.appendChild(li);     
+			var newRow = document.createElement("tr");
+			var td = document.createElement("td");
+			td.appendChild(document.createTextNode(val.name));
+			newRow.appendChild(td);  
+		    ul.appendChild(newRow);     
 		})
 	})
 	
-	$("#addAS").submit(function() {
-		var nameValue = $("#asname").val;
-		console.log(nameValue);
+	$('#addAS').submit(function() {
+		var nameValue = document.getElementById('nameTxt').value;
+		
 		var newAir = {name:nameValue};
+		
 		$.ajax({
 		    type: "PUT",
 		    url: "http://localhost:8080/com.airbus.acdc.simple.rest.service/rest/demo",

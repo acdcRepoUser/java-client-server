@@ -1,30 +1,36 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-	<meta charset="ISO-8859-1">
-	<title>Storage Overview</title>
-	<head>
-        <title>Hello jQuery</title>        
-       
-        <script src="http://code.jquery.com/jquery-latest.js"></script>
-      <!--  <script src="bower_components/jquery/dist/jquery.min.js"></script>  -->
-       	<script src="loadData.js"></script>
-    </head>
+<meta charset="ISO-8859-1">
+<title>Storage Overview</title>
+<head>
+<title>Hello jQuery</title>
+
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<!--  <script src="bower_components/jquery/dist/jquery.min.js"></script>  -->
+<script src="loadData.js"></script>
 </head>
- <style>
-      @import url(style.css);
-  </style>
+</head>
+<style>
+@import "style.css";
+</style>
 <body>
 	<b>All Airspaces</b>
-	<ul id="ct"></ul>
-	
+	<table id="ct" style="width: 100%">
+		<tr>
+			<th>Name</th>
+		</tr>
+	</table>
+
 	<form id="addAS" accept-charset="utf-8">
-	
-    <label class="h2"  form="newAirSpace">New Air Space</label>
-    <label for="asname">Name</label> 
-    <input type="text" name="asname" id="asname" maxlength="30">
-    
-    <button type="submit">Add</button>
-</form>
+
+		
+		 <label for="nameTxt">Name</label>
+		 
+		 <input name="nameTxt" type="text" maxlength="512" id="nameTxt" />
+
+		<button type="submit">Add</button>
+	</form>
 </body>
 </html>
